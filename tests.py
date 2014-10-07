@@ -16,7 +16,7 @@ class KMAPITest(unittest.TestCase):
         self.app = api.app.test_client()
 
     def tearDown(self):
-        api.metrics_list = []
+        api.METRICS = []
 
     def test_index(self):
         resp = self.app.get('/')
